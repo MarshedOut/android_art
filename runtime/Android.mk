@@ -335,7 +335,7 @@ LIBART_ENUM_OPERATOR_OUT_HEADER_FILES := \
   thread_state.h \
   verifier/method_verifier.h
 
-LIBART_CFLAGS := -DBUILDING_LIBART=1
+LIBART_CFLAGS := -DBUILDING_LIBART=1 -Wno-error=frame-larger-than
 
 ifeq ($(MALLOC_IMPL),dlmalloc)
   LIBART_CFLAGS += -DUSE_DLMALLOC
